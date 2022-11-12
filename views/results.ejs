@@ -11,14 +11,17 @@
     <div class="container" style="background-color: #131B23; border-radius: 5px; margin-top: 8%; max-width: 50%;">
         <div class="resutls">
             <h1>series number: <%= data.watchCode %></h1>
+            <a href="/"><button type="submit" class="btn btn-primary ">Inspect</button></a>
             <hr>
             <h3><img src="<%= data.image %>" alt=""></h3>
             <h3>title: <%= data.title %></h3>
             <h3>link: <a href="<%= data.link %>"><%= data.link %></a></h3>
             <h3>description: <%= data.description %></h3>
-            <h3>seasons: <%= data.seasons %></h3>
-            <h3>episodes: <%= data.episodes %></h3>
-
+            <h3>seasons:</h3>
+                        
+            <% seasons.forEach(function(eachSeason){ %>
+                <a href="/title/<%= data.watchCode %>/season/<%= eachSeason.seasonNumber %>"><button type="submit" class="btn btn-primary mb-3">season <%= eachSeason.seasonNumber %></button></a>
+            <% }) %>
             
         </div>
     </div>

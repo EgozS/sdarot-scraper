@@ -19,4 +19,16 @@
         </form>
     </div>
 </body>
+<script>
+    //get the url params and check if error is 404
+    const urlParams = new URLSearchParams(window.location.search);
+    const error = urlParams.get('error');
+    if(error == 404){
+        alert("series not found");
+    }
+    else if(error == 418){
+        alert("you are a teapot");
+    }
+
+</script>
 </html>

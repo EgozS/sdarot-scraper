@@ -16,7 +16,7 @@
 </style>
 <body style = "background-color: #2274A5; color: #E9F1F7; height: 100%; width: 100%;">
     <div class="container" style="background-color: #131B23; border-radius: 5px; margin-top: 2%; margin-bottom: 2% ;max-width: 50%;">
-        <% if (data.length < 0) { %>
+        <% if (data.length <= 0) { %>
             <h4>No results found</h4>
         <% } %>
         <% if (data.length >= 1) { %>
@@ -27,7 +27,7 @@
                     <hr>
                     <h3><img src="<%= eachData.img %>" alt=""><%= data.img %></h3>
                     <h3>title: <%= eachData.name %></h3>
-                    <a href="/title/<%= eachData.watchCode %>" ><button style="margin-bottom: 10px;" id="inspect">inspect</button></a>
+                    <a href="/title/<%= eachData.watchCode %>" ><button type="submit" class="btn btn-primary mb-10">Go Back</button></a>
                 </div>    
             <% }) %>
         <% } %>
